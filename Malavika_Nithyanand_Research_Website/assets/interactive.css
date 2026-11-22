@@ -1,0 +1,30 @@
+/* Interactive PDE dynamics — public website */
+.solver-equation{font:23px/1.6 Georgia,serif;background:var(--paper);border:1px solid var(--stroke);border-radius:14px;padding:19px 25px;margin-bottom:23px;color:var(--blue)}
+.solver-equation small{font:12px system-ui;color:var(--muted)}
+.solver-workbench{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;align-items:start}
+.solver-panel,.solver-visual{background:var(--paper);border:1px solid var(--stroke);border-radius:17px;padding:22px;min-width:0}
+.solver-label{color:var(--subtle);font-size:10px;letter-spacing:1.5px;font-weight:850;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.solver-panel .solver-label:not(:first-child){margin-top:27px}
+.solver-label button{border:1px solid var(--stroke);border-radius:6px;background:var(--bg);color:var(--blue);font-size:11px;padding:5px 9px;letter-spacing:0}
+.solver-panel label{display:block;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:17px}
+.solver-panel label strong{float:right;color:var(--ink)}
+.solver-panel input[type=range]{width:100%;margin-top:11px;accent-color:var(--blue)}
+.solver-choices{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.solver-choices button{border:1px solid var(--stroke);border-radius:8px;background:var(--bg);color:var(--muted);font-size:11px;font-weight:750;padding:10px 7px;transition:background .12s ease,border-color .12s ease,color .12s ease}
+.solver-choices button.selected{background:var(--blue);border-color:var(--blue);color:#fff}
+.solver-choices button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.solver-small{font-size:11px;color:var(--subtle);line-height:1.7;margin:17px 0 0}
+.solver-visual-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:20px}
+.solver-visual-head strong{font-size:15px}
+.solver-visual-head small{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;font-weight:650}
+.solver-heatgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.solver-heatgrid figure{margin:0;min-width:0}
+.solver-heatgrid figcaption{font-size:12px;font-weight:750;color:var(--muted);margin-bottom:8px}
+.solver-heatgrid canvas{display:block;width:100%;height:auto;aspect-ratio:512/244;background:#10243b;border-radius:8px;border:1px solid var(--stroke)}
+.sim-colorbar{display:flex;gap:10px;align-items:center;color:var(--subtle);font-size:10px;margin-top:14px}
+.sim-gradient{flex:1;height:9px;border-radius:7px;background:linear-gradient(90deg,#102140,#235b80,#179da4,#8cca88,#f8d46f)}
+.story-chapter#causal .solver-equation{margin:15px 0 22px}
+.story-chapter#causal .solver-workbench{margin:0}
+@media(max-width:960px){.solver-workbench{grid-template-columns:1fr}}
+@media(max-width:670px){.solver-panel,.solver-visual{padding:16px}.solver-heatgrid{grid-template-columns:1fr}.solver-visual-head{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
